@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurélis Digital — Votre site qui vend</title>
+<meta name="description" content="Sites vitrines & boutiques en ligne pros pour le marché gabonais. Offres dès 150 000 F. Livré vite, WhatsApp & Mobile Money inclus. Bonus de lancement offerts.">
+<meta name="theme-color" content="#0b0e14">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Aurélis Digital — Votre site qui vend">
+<meta property="og:description" content="Sites & boutiques en ligne pros pour le marché gabonais. Offres dès 150 000 F. Bonus de lancement offerts (10 places).">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0b0e14;--ink2:#11151f;--card:#151a26;--card2:#1b2230;
+    --line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.16);
+    --text:#eef1f7;--muted:#9aa4b8;--gold:#e7b75f;--goldb:#ffcf7a;--lime:#b6f24a;
+    --shadow:0 30px 80px -30px rgba(0,0,0,.7);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Outfit',sans-serif;background:var(--ink);color:var(--text);line-height:1.55;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+  body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(900px 600px at 12% -5%,rgba(231,183,95,.13),transparent 60%),
+    radial-gradient(800px 600px at 95% 10%,rgba(182,242,74,.08),transparent 55%),
+    radial-gradient(700px 700px at 80% 110%,rgba(231,183,95,.07),transparent 60%)}
+  body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 22px}
+  .disp{font-family:'Bricolage Grotesque',sans-serif}
+
+  /* HEADER */
+  header{padding:44px 0 4px;text-align:center}
+  .brand{display:inline-flex;align-items:center;gap:11px;padding:9px 18px;border:1px solid var(--line2);
+    border-radius:100px;background:rgba(255,255,255,.02);backdrop-filter:blur(8px)}
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px var(--gold)}
+  .brand b{font-family:'Bricolage Grotesque';font-weight:800;letter-spacing:.5px;font-size:.95rem}
+  .brand span{color:var(--muted);font-size:.82rem}
+  h1{font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(2.3rem,6vw,4.3rem);line-height:1.02;
+    letter-spacing:-1.5px;margin:28px auto 0;max-width:14ch}
+  h1 em{font-style:normal;color:var(--goldb);position:relative;white-space:nowrap}
+  h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.14em;background:var(--gold);opacity:.35;border-radius:4px}
+  .sub{color:var(--muted);font-size:clamp(1rem,2vw,1.18rem);max-width:56ch;margin:22px auto 0;font-weight:300}
+
+  /* URGENCY */
+  .urgency{margin:30px auto 0;max-width:760px;display:flex;align-items:center;justify-content:center;gap:18px;
+    flex-wrap:wrap;padding:14px 24px;border-radius:14px;background:rgba(255,90,70,.08);border:1px solid rgba(255,120,90,.3)}
+  .urgency .live{display:flex;align-items:center;gap:8px;font-family:'Bricolage Grotesque';font-weight:800;
+    font-size:.82rem;letter-spacing:1px;color:#ff9b8a;text-transform:uppercase}
+  .urgency .live::before{content:"";width:9px;height:9px;border-radius:50%;background:#ff6a4d;
+    box-shadow:0 0 0 0 rgba(255,106,77,.6);animation:pulse 1.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,106,77,.6)}70%{box-shadow:0 0 0 10px rgba(255,106,77,0)}100%{box-shadow:0 0 0 0 rgba(255,106,77,0)}}
+  .urgency p{font-size:.98rem;color:#ffd9d0}
+  .urgency b{color:#fff}
+
+  /* GRID */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:44px 0 16px;align-items:stretch}
+  @media(max-width:920px){.grid{grid-template-columns:1fr;max-width:460px;margin-inline:auto}}
+  .card{position:relative;display:flex;flex-direction:column;background:linear-gradient(180deg,var(--card),var(--ink2));
+    border:1px solid var(--line);border-radius:24px;padding:30px 26px;box-shadow:var(--shadow);
+    transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s}
+  .card:hover{transform:translateY(-8px);border-color:var(--line2)}
+  .card.feat{background:linear-gradient(180deg,#1d2435,#141927);border:1px solid rgba(231,183,95,.4);
+    box-shadow:0 40px 90px -30px rgba(231,183,95,.25),var(--shadow)}
+  .card.feat::before{content:"⭐ LE PLUS CHOISI";position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+    font-family:'Bricolage Grotesque';font-weight:800;font-size:.68rem;letter-spacing:1.5px;
+    background:linear-gradient(90deg,var(--gold),var(--goldb));color:#1a1305;padding:7px 16px;border-radius:9px;
+    white-space:nowrap;box-shadow:0 10px 24px -8px rgba(231,183,95,.6)}
+  .tier{font-family:'Bricolage Grotesque';font-weight:700;font-size:.76rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+  .feat .tier{color:var(--goldb)}
+  .cardname{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.6rem;margin:8px 0 4px;letter-spacing:-.5px}
+  .for{color:var(--muted);font-size:.88rem;font-weight:300;min-height:40px}
+  .price{display:flex;align-items:baseline;gap:6px;margin:18px 0 2px}
+  .price .amt{font-family:'Bricolage Grotesque';font-weight:800;font-size:2.5rem;letter-spacing:-1px;line-height:1}
+  .price .cur{font-size:1rem;color:var(--muted);font-weight:500}
+  .once{color:var(--muted);font-size:.8rem;margin-bottom:20px}
+  .feats{list-style:none;display:flex;flex-direction:column;gap:11px;margin:4px 0 22px;flex:1}
+  .feats li{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;color:#d7dcea;font-weight:300}
+  .feats li svg{flex:0 0 17px;margin-top:3px}
+  .feats li b{font-weight:600;color:var(--text)}
+  .cta{display:block;text-align:center;text-decoration:none;font-family:'Bricolage Grotesque';font-weight:700;
+    font-size:1rem;padding:14px;border-radius:13px;transition:.25s;border:1px solid var(--line2);
+    color:var(--text);background:rgba(255,255,255,.03)}
+  .cta:hover{transform:translateY(-2px);background:rgba(255,255,255,.07)}
+  .card.feat .cta{background:linear-gradient(90deg,var(--gold),var(--goldb));color:#1a1305;border:none;
+    box-shadow:0 16px 34px -12px rgba(231,183,95,.6)}
+
+  /* SECTION TITLE */
+  .sectitle{text-align:center;margin:70px 0 8px}
+  .sectitle .kick{font-family:'Bricolage Grotesque';font-weight:700;letter-spacing:2px;font-size:.78rem;
+    text-transform:uppercase;color:var(--lime)}
+  .sectitle h2{font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(1.7rem,4vw,2.6rem);
+    letter-spacing:-1px;margin-top:10px}
+  .sectitle p{color:var(--muted);font-weight:300;max-width:54ch;margin:12px auto 0}
+
+  /* VALUE STACK */
+  .stack{margin:34px auto 0;max-width:760px;border:1px solid var(--line);border-radius:24px;overflow:hidden;
+    background:linear-gradient(180deg,var(--card),var(--ink2))}
+  .stack .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 26px;border-bottom:1px solid var(--line)}
+  .stack .row .l{display:flex;align-items:flex-start;gap:13px}
+  .stack .row .l .nm{font-weight:500;font-size:1.02rem}
+  .stack .row .l .nm small{display:block;color:var(--muted);font-weight:300;font-size:.85rem;margin-top:2px}
+  .stack .row .v{text-align:right;white-space:nowrap}
+  .stack .row .v .was{color:var(--muted);text-decoration:line-through;font-size:.95rem}
+  .stack .row .v .free{font-family:'Bricolage Grotesque';font-weight:800;color:var(--lime);font-size:.95rem;display:block}
+  .stack .total{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 26px;
+    background:linear-gradient(100deg,rgba(231,183,95,.12),rgba(182,242,74,.08))}
+  .stack .total .lab{font-family:'Bricolage Grotesque';font-weight:700;font-size:1.05rem}
+  .stack .total .lab small{display:block;color:var(--muted);font-weight:300;font-size:.85rem;margin-top:2px}
+  .stack .total .big{text-align:right}
+  .stack .total .big .was{color:var(--muted);text-decoration:line-through;font-size:1.05rem}
+  .stack .total .big .now{font-family:'Bricolage Grotesque';font-weight:800;color:var(--goldb);font-size:1.8rem;line-height:1}
+
+  /* GUARANTEES */
+  .guars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:34px 0 0}
+  @media(max-width:780px){.guars{grid-template-columns:1fr;max-width:460px;margin-inline:auto}}
+  .guar{padding:26px 24px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.015);text-align:center}
+  .guar .ic{font-size:2rem}
+  .guar h4{font-family:'Bricolage Grotesque';font-weight:700;font-size:1.12rem;margin:12px 0 6px}
+  .guar p{color:var(--muted);font-size:.88rem;font-weight:300}
+
+  /* SERENITE */
+  .serenite{margin:34px 0 10px;border-radius:24px;overflow:hidden;border:1px solid var(--line);
+    background:linear-gradient(110deg,#12160f,#11151f);display:grid;grid-template-columns:1.4fr 1fr}
+  @media(max-width:780px){.serenite{grid-template-columns:1fr}}
+  .serenite .l{padding:32px}
+  .serenite .tier{color:var(--lime)}
+  .serenite h3{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.5rem;margin:8px 0 10px;letter-spacing:-.5px}
+  .serenite p{color:var(--muted);font-weight:300;font-size:.95rem;max-width:46ch}
+  .serenite .tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+  .serenite .tags span{font-size:.82rem;color:#cdd4e2;border:1px solid var(--line);padding:6px 12px;border-radius:100px;background:rgba(255,255,255,.02)}
+  .serenite .r{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+    padding:32px 26px;background:linear-gradient(180deg,rgba(182,242,74,.07),rgba(182,242,74,.02));border-left:1px solid var(--line)}
+  @media(max-width:780px){.serenite .r{border-left:none;border-top:1px solid var(--line)}}
+  .serenite .r .amt{font-family:'Bricolage Grotesque';font-weight:800;font-size:2.3rem;line-height:1}
+  .serenite .r small{color:var(--muted);font-size:.85rem}
+
+  /* FOOTER CTA */
+  .foot{margin:60px 0 60px;text-align:center;padding:50px 30px;border-radius:28px;
+    background:linear-gradient(120deg,rgba(231,183,95,.1),rgba(182,242,74,.06));border:1px solid var(--line2)}
+  .foot h2{font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(1.7rem,4vw,2.6rem);letter-spacing:-1px}
+  .foot p{color:var(--muted);margin:14px auto 26px;max-width:50ch;font-weight:300}
+  .wa{display:inline-flex;align-items:center;gap:11px;text-decoration:none;font-family:'Bricolage Grotesque';
+    font-weight:700;font-size:1.1rem;background:#25d366;color:#06270f;padding:16px 30px;border-radius:14px;
+    box-shadow:0 18px 40px -14px rgba(37,211,102,.6);transition:transform .2s}
+  .wa:hover{transform:translateY(-3px)}
+  .signature{margin-top:40px;color:var(--muted);font-size:.85rem}
+  .signature b{color:var(--text);font-family:'Bricolage Grotesque'}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand"><span class="dot"></span><b>AURÉLIS DIGITAL</b><span>•&nbsp; Studio web & e-commerce 🇬🇦</span></div>
+    <h1>Votre entreprise mérite un <em>site qui vend</em>.</h1>
+    <p class="sub">Sites vitrines & boutiques en ligne professionnels, pensés pour le marché gabonais. Livré vite, optimisé pour Google, connecté à WhatsApp & Mobile Money.</p>
+    <div class="urgency">
+      <span class="live">Offre de lancement</span>
+      <p><b>10 places seulement</b> · plus que <b>6 disponibles</b> · valable jusqu'au <b>30 juin</b></p>
+    </div>
+  </header>
+
+  <!-- PRICING -->
+  <section class="grid">
+    <div class="card">
+      <div class="tier">Offre 1</div>
+      <div class="cardname">Vitrine Express</div>
+      <div class="for">Pour exister en ligne, simplement et vite.</div>
+      <div class="price"><span class="amt">150.000</span><span class="cur">FCFA</span></div>
+      <div class="once">Paiement unique · livré en 5 à 7 jours</div>
+      <ul class="feats">
+        <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#e7b75f" stroke-width="1.4"/><path d="M6 10.5l2.5 2.5L14 7" stroke="#e7b75f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Site vitrine <b>1 à 3 pages</b></span></li>
+        <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#e7b75f" stroke-width="1.4"/><path d="M6 10.5l2.5 2.5L14 7" stroke="#e7b75f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Design <b>moderne & 100% mobile</b></span></li>
+        <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#e7b75f" stroke-width="1.4"/><path d="M6 10.5l2.5 2.5L14 7" stroke="#e7b75f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Bouton <b>WhatsApp</b> + contact</span></li>
+        <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#e7b75f" stroke-width="1.4"/><path d="M6 10.5l2.5 2.5L14 7" stroke="#e7b75f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Visible sur <b>Google</b></span></li>
+      </ul>
+      <a class="cta" href="https://wa.me/24177080063?text=Bonjour%20Bilal%20%F0%9F%91%8B%20Je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20l%27offre%20VITRINE%20EXPRESS%20%28150%20000%20F%29.%20Pouvez-vous%20m%27en%20dire%20plus%20%3F" target="_blank" rel="noopener">Commander la Vitrine →</a>
+    </div>
+
+    <div class="card feat">
+      <div class="tier">Offre 2</div>
+      <div class="cardname">Business Pro</div>
+      <div class="for">Une vraie présence qui inspire confiance.</div>
+      <div class="price"><span class="amt">250.000</span><span class="cur">FCFA</span></div>
+      <div class="once">Paiement unique · livré en 7 à 10 jours</div>
+      <ul class="feats">
+        <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#ffcf7a" stroke-width="1.4"/><path d="M6 10.5l2.5 2.5L14 7" stroke="#ffcf7a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Site <b>5 à 7 pages</b> sur-mesure</span></li>
+        <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#ffcf7a" stroke-width="1.4"/><path d="M6 10.5l2.5 2.5L14 7" stroke="#ffcf7a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Catalogue</b> + commande WhatsApp</span></li>
+        <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#ffcf7a" stroke-width="1.4"/><path d="M6 10.5l2.5 2.5L14 7" stroke="#ffcf7a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Galerie + <b>blog / actualités</b></span></li>
+        <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#ffcf7a" stroke-width="1.4"/><path d="M6 10.5l2.5 2.5L14 7" stroke="#ffcf7a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>SEO avancé</b> + Google Business</span></li>
+        <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#ffcf7a" stroke-width="1.4"/><path d="M6 10.5l2.5 2.5L14 7" stroke="#ffcf7a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Formation 1h</b> incluse</span></li>
+      </ul>
+      <a class="cta" href="https://wa.me/24177080063?text=Bonjour%20Bilal%20%F0%9F%91%8B%20Je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20l%27offre%20BUSINESS%20PRO%20%28250%20000%20F%29.%20Pouvez-vous%20m%27en%20dire%20plus%20%3F" target="_blank" rel="noopener">Commander Business Pro →</a>
+    </div>
+
+    <div class="card">
+      <div class="tier">Offre 3</div>
+      <div class="cardname">E-commerce Shopify</div>
+      <div class="for">Votre boutique qui vend 24h/24.</div>
+      <div class="price"><span class="amt">450.000</span><span class="cur">FCFA</span></div>
+      <div class="once">Paiement unique · livré en 10 à 14 jours</div>
+      <ul class="feats">
+        <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#e7b75f" stroke-width="1.4"/><path d="M6 10.5l2.5 2.5L14 7" stroke="#e7b75f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Boutique Shopify</b> complète</span></li>
+        <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#e7b75f" stroke-width="1.4"/><path d="M6 10.5l2.5 2.5L14 7" stroke="#e7b75f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Panier & <b>tunnel de paiement</b></span></li>
+        <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#e7b75f" stroke-width="1.4"/><path d="M6 10.5l2.5 2.5L14 7" stroke="#e7b75f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Mobile Money</b> + livraison</span></li>
+        <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#e7b75f" stroke-width="1.4"/><path d="M6 10.5l2.5 2.5L14 7" stroke="#e7b75f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>WhatsApp Business</b> intégré</span></li>
+        <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#e7b75f" stroke-width="1.4"/><path d="M6 10.5l2.5 2.5L14 7" stroke="#e7b75f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Formation</b> gestion complète</span></li>
+      </ul>
+      <a class="cta" href="https://wa.me/24177080063?text=Bonjour%20Bilal%20%F0%9F%91%8B%20Je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20l%27offre%20E-COMMERCE%20SHOPIFY%20%28450%20000%20F%29.%20Pouvez-vous%20m%27en%20dire%20plus%20%3F" target="_blank" rel="noopener">Commander ma boutique →</a>
+    </div>
+  </section>
+
+  <!-- VALUE STACK -->
+  <div class="sectitle">
+    <div class="kick">Inclus gratuitement</div>
+    <h2>Et ce n'est pas tout…</h2>
+    <p>Avec chaque offre de lancement, vous recevez en plus ces bonus — sans payer un franc de plus.</p>
+  </div>
+  <section class="stack">
+    <div class="row">
+      <div class="l"><span class="nm">🌐 Nom de domaine + 1 an d'hébergement<small>Votre adresse .com professionnelle, prête à l'emploi</small></span></div>
+      <div class="v"><span class="was">25.000 F</span><span class="free">OFFERT</span></div>
+    </div>
+    <div class="row">
+      <div class="l"><span class="nm">🎨 Pack de 5 visuels pour vos réseaux<small>Posts prêts à publier, assortis à votre site</small></span></div>
+      <div class="v"><span class="was">30.000 F</span><span class="free">OFFERT</span></div>
+    </div>
+    <div class="row">
+      <div class="l"><span class="nm">📘 Mini-guide « Faire vivre son site »<small>Le PDF pour attirer plus de clients en ligne</small></span></div>
+      <div class="v"><span class="was">15.000 F</span><span class="free">OFFERT</span></div>
+    </div>
+    <div class="row">
+      <div class="l"><span class="nm">🛟 30 jours de support après livraison<small>On reste joignable pour vos questions</small></span></div>
+      <div class="v"><span class="was">20.000 F</span><span class="free">OFFERT</span></div>
+    </div>
+    <div class="row">
+      <div class="l"><span class="nm">💬 Config WhatsApp + fiche Google Business<small>Pour être trouvé et contacté facilement</small></span></div>
+      <div class="v"><span class="was">15.000 F</span><span class="free">OFFERT</span></div>
+    </div>
+    <div class="total">
+      <div class="lab">Valeur réelle des bonus<small>Inclus gratuitement avec votre offre</small></div>
+      <div class="big"><span class="was">105.000 F</span><br><span class="now">0 F</span></div>
+    </div>
+  </section>
+
+  <!-- GUARANTEES -->
+  <div class="sectitle">
+    <div class="kick">Zéro risque</div>
+    <h2>Vous êtes protégé</h2>
+  </div>
+  <section class="guars">
+    <div class="guar"><div class="ic">🛡️</div><h4>Satisfait ou retravaillé</h4><p>On peaufine votre site jusqu'à ce que vous validiez à 100% — avant toute mise en ligne.</p></div>
+    <div class="guar"><div class="ic">⏱️</div><h4>Délai respecté</h4><p>On s'engage sur une date de livraison claire, et on la tient.</p></div>
+    <div class="guar"><div class="ic">🤝</div><h4>Jamais seul</h4><p>Formation incluse + support après livraison. On vous accompagne vraiment.</p></div>
+  </section>
+
+  <!-- SERENITE -->
+  <section class="serenite">
+    <div class="l">
+      <div class="tier" style="font-family:'Bricolage Grotesque';font-weight:700;font-size:.76rem;letter-spacing:2px;text-transform:uppercase">En option · tranquillité totale</div>
+      <h3>Pack Sérénité</h3>
+      <p>On s'occupe de tout après la livraison : votre site reste à jour, sécurisé et performant pendant que vous gérez votre business.</p>
+      <div class="tags">
+        <span>✓ Maintenance & sauvegardes</span>
+        <span>✓ Support prioritaire</span>
+        <span>✓ 2 modifs / mois</span>
+        <span>✓ Suivi des performances</span>
+      </div>
+    </div>
+    <div class="r">
+      <div class="amt">35.000</div>
+      <small>FCFA / mois · sans engagement</small>
+    </div>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section class="foot" id="contact">
+    <h2>Prêt à passer en ligne&nbsp;?</h2>
+    <p>Discutons de votre projet gratuitement. Réponse en moins de 24h, devis clair et sans surprise. Acompte de 50% pour démarrer, le reste à la livraison.</p>
+    <a class="wa" href="https://wa.me/24177080063?text=Bonjour%20Bilal%20%F0%9F%91%8B%20J%27ai%20vu%20vos%20offres%20de%20cr%C3%A9ation%20de%20site%20et%20je%20veux%20r%C3%A9server%20ma%20place.%20Pouvez-vous%20me%20recontacter%20%3F" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#06270f"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.2.2 2 3.1 5 4.3 2.4 1 2.9.8 3.4.8.5-.1 1.7-.7 1.9-1.4.2-.6.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2z"/></svg>
+      Réserver ma place sur WhatsApp
+    </a>
+    <div class="signature">Conçu par <b>Bilal</b> — Développeur No-Code · <b>Aurélis Digital</b>, Libreville</div>
+  </section>
+
+</div>
+</body>
+</html>
